@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Player Profile | SpursLineup</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+    <header>
+        <p>SpursLineup</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="roster.html">Roster</a>
+            <a href="player.html">Player Profile</a>
+        </nav>
+    </header>
+
+    <main class="player-profile">
+        <a href="roster.html">Back to roster</a>
+
+        <div class="profile-navigation">
+            <a id="previous-player" aria-label="Previous player" hidden>
+                &#8592;
+            </a>
+
+            <h1 id="player-name">Player Profile</h1>
+
+            <a id="next-player" aria-label="Next player" hidden>
+                &#8594;
+            </a>
+        </div>
+
+        <div id="player-details"></div>
+
+        <div id="player-actions" hidden>
+            <button type="button" id="favourite-button" aria-pressed="false">
+                Add to favourites
+            </button>
+        </div>
+
+        <section id="player-notes" hidden>
+            <h2>My player note</h2>
+
+            <p id="saved-note"></p>
+
+            <div id="note-actions" hidden>
+                <button type="button" id="edit-note">Edit note</button>
+                <button type="button" id="delete-note">Delete note</button>
+            </div>
+
+            <form id="note-form">
+                <label for="note-input">Write a note about this player</label>
+
+                <textarea
+                    id="note-input"
+                    rows="4"
+                    maxlength="1000"
+                    placeholder="Your thoughts about this player..."
+                    required
+                ></textarea>
+
+                <div>
+                    <button type="submit">Save note</button>
+                    <button type="button" id="cancel-note" hidden>
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <p id="note-status" role="status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>SpursLineup - Created by Andrew Ardiyanta Widjaja (25099242d)</p>
+    </footer>
+
+    <script src="js/players.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>

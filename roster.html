@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roster | SpursLineup</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+    <header>
+        <p>SpursLineup</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="roster.html">Roster</a>
+            <a href="player.html">Player Profile</a>
+        </nav>
+    </header>
+
+    <main class="roster">
+        <h1>San Antonio Spurs Roster</h1>
+
+        <p>Search for players and sort the roster.</p>
+
+        <div class="roster-controls">
+            <div>
+                <label for="player-search">Search by name</label>
+                <input type="search" id="player-search" placeholder="Enter a player's name"/>
+            </div>
+
+            <div>
+                <label for="sort-by">Sort by</label>
+                <select id="sort-by">
+                    <option value="name">Name</option>
+                    <option value="age">Age</option>
+                    <option value="height">Height</option>
+                    <option value="position">Position</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="sort-order">Order</label>
+                <select id="sort-order">
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="position-filter">Position</label>
+                <select id="position-filter">
+                    <option value="all">All positions</option>
+                    <option value="Guard">Guard</option>
+                    <option value="Forward">Forward</option>
+                    <option value="Center">Center</option>
+                </select>
+            </div>
+            <div class="favourites-control">
+                <label for="favourites-only">
+                    <input type="checkbox" id="favourites-only"/>
+                    Favourites only
+                </label>
+            </div>
+        </div>
+
+        <div class="roster-table-wrapper">
+            <table class="roster-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Player</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Height</th>
+                    </tr>
+                </thead>
+
+                <tbody id="player-list"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>SpursLineup - Created by Andrew Ardiyanta Widjaja (25099242d)</p>
+    </footer>
+
+    <script src="js/players.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/roster.js"></script>
+</body>
+</html>
