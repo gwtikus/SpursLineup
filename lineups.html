@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lineups | SpursLineup</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+    <header>
+        <p>SpursLineup</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="roster.html">Roster</a>
+            <a href="player.html">Player Profile</a>
+            <a href="lineups.html">Create Lineups</a>
+        </nav>
+    </header>
+
+    <main class="lineup-page">
+        <h1>Lineups</h1>
+        <p>Build a starting five from the Spurs roster.</p>
+
+        <form id="lineup-form" novalidate>
+            <h2 id="form-heading">Create a lineup</h2>
+            <div id="player-selects">
+                <div class="select-row">
+                    <label for="lineup-name">Lineup name</label>
+                    <input type="text" id="lineup-name" maxlength="30" autocomplete="off">
+                </div>
+            </div>
+            <p id="lineup-message" aria-live="polite"></p>
+            <button type="submit" id="save-lineup">Save lineup</button>
+            <button type="button" id="cancel-edit" hidden>Cancel edit</button>
+        </form>
+
+        <h2>Saved lineups</h2>
+        <div id="lineup-list"></div>
+    </main>
+
+    <footer>
+        <p>SpursLineup - Created by Andrew Ardiyanta Widjaja (25099242d)</p>
+    </footer>
+
+    <script src="js/players.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/lineups.js"></script>
+</body>
+</html>
