@@ -23,7 +23,6 @@ function getFavourites() {
     }
 }
 
-
 function saveFavourites(favourites) {
     localStorage.setItem(
         FAVOURITES_KEY,
@@ -70,5 +69,29 @@ function saveNotes(notes) {
     localStorage.setItem(
         NOTES_KEY,
         JSON.stringify(notes)
+    );
+}
+
+const LINEUPS_KEY = "spurslineup-lineups";
+
+function getLineups() {
+    const saved = localStorage.getItem(LINEUPS_KEY);
+
+    if (saved === null) {
+        return [];
+    }
+
+    try {
+        const parsed = JSON.parse(saved);
+        return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+        return [];
+    }
+}
+
+function saveLineups(lineups) {
+    localStorage.setItem(
+        LINEUPS_KEY,
+        JSON.stringify(lineups)
     );
 }
