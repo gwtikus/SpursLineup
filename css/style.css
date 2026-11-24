@@ -365,6 +365,129 @@ footer p {
     overflow-wrap: anywhere;
 }
 
+.lineup-page {
+    width: 92%;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+.lineup-page h1, .lineup-page > p {
+    text-align: center;
+}
+
+#lineup-form {
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #eeeeee;
+    border: 1px solid #bbbbbb;
+    border-radius: 12px;
+}
+
+#lineup-form h2 {
+    margin-top: 0;
+}
+
+#lineup-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#lineup-name, .select-row select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    padding: 0 10px;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #111111;
+    font: inherit;
+    line-height: normal;
+}
+
+#player-selects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+#lineup-message {
+    min-height: 1.8em;
+    margin: 12px 0 0;
+    color: #333333;
+}
+
+#lineup-form button, .lineup-card button {
+    margin-top: 12px;
+    margin-right: 8px;
+    padding: 10px 20px;
+    border: 1px solid #111111;
+    border-radius: 6px;
+    background-color: #111111;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+}
+
+#lineup-form button:hover, #lineup-form button:focus-visible, .lineup-card button:hover, .lineup-card button:focus-visible {
+    background-color: #333333;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+#cancel-edit, .lineup-card button:last-of-type {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+#cancel-edit:hover, #cancel-edit:focus-visible, .lineup-card button:last-of-type:hover, .lineup-card button:last-of-type:focus-visible {
+    background-color: #dddddd;
+    text-shadow: none;
+}
+
+#lineup-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+#lineup-list > p {
+    grid-column: 1 / -1;
+}
+
+.lineup-card {
+    padding: 20px;
+    background-color: #eeeeee;
+    border: 1px solid #bbbbbb;
+    border-radius: 12px;
+}
+
+.lineup-card h3 {
+    margin-top: 0;
+    overflow-wrap: anywhere;
+}
+
+.lineup-card ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lineup-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+}
+
+.lineup-player img {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 @media (max-width: 600px) {
     .roster-controls > div,
     .roster-controls input[type="search"],
